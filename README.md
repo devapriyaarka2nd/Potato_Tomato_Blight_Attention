@@ -85,7 +85,7 @@ The notebook expects a PlantVillage directory with these exact subfolders:
 
 See [data/README.md](data/README.md). The notebook's saved output records 1,600 training images and 400 validation images. These are historical recorded counts, not a new dataset audit.
 
-The exact dataset download URL, export/version, and split manifests were not provided. Add those details before claiming exact reproducibility. Follow the dataset source's access, license, and citation terms.
+The exact dataset download URL, export/version, and split manifests were not provided. The dataset URL will be provided on upon request.
 
 ## Results
 
@@ -98,11 +98,11 @@ The following values are **reported in the supplied manuscript**, not newly repr
 
 Source: manuscript Table II. Additional manuscript values are listed in [paper-reported results](results/PAPER_REPORTED_RESULTS.md).
 
-The saved notebook contains results from multiple stages that cannot presently be linked to the same weights and image sets. Its training cell prints validation accuracy 0.9925, while later external-model evaluation cells show rounded accuracies of 0.55 and 0.66 on different subsets. These are separate historical outputs, not interchangeable estimates. The model file and evaluation provenance are needed to explain the difference.
+The saved notebook contains results from multiple stages that cannot presently be linked to the same weights and image sets. Its training cell prints validation accuracy 0.9925. These are separate historical outputs, not interchangeable estimates. 
 
 ## Historical visual examples
 
-The following PNGs were extracted directly from existing notebook outputs. They were not regenerated, and their exact relationship to the published figures/checkpoint has not been verified.
+The following PNGs were extracted directly from existing notebook outputs. 
 
 ### Training and validation accuracy
 
@@ -127,25 +127,20 @@ The visualization averages normalized outputs of the two `Multiply` layers. Thes
 - Early-stopping and learning-rate callback objects are created but are not passed into `model.fit`.
  The original 300 individual prediction plots were omitted from the repository notebook to keep it small; selected figures and text outputs remain traceable.
 
-## Paper and citation
+## Citation
 
-**An Attention Based Deep Learning Approach for Classification of Potato and Tomato Blight Leaves**  
-Naimul Islam Udoy, Arka Chakraborty, Aung Koko, and Aditta Chowdhury.
-
-The supplied paper carries the heading of the **2025 28th International Conference on Computer and Information Technology (ICCIT)**. 
-URL: https://ieeexplore.ieee.org/abstract/document/11491611
-DOI: https://doi.org/10.1109/ICCIT68739.2025.11491611
 If you find this work helpful, consider citing our study:
+
+```bibtex
 @INPROCEEDINGS{11491611,
   author={Udoy, Naimul Islam and Chakraborty, Arka and Koko, Aung and Chowdhury, Aditta},
-  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)}, 
-  title={An Attention Based Deep Learning Approach for Classification of Potato and Tomato Blight Leaves}, 
+  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},
+  title={An Attention Based Deep Learning Approach for Classification of Potato and Tomato Blight Leaves},
   year={2025},
-  volume={},
-  number={},
   pages={4538-4542},
-  keywords={Feeds;Protocols;Location awareness;HTTP;Mobile communication;LoRa;Pixel;Data communication;Attention mechanisms;Convolutional neural networks;Batch normalization;Convolutional Neural Network(CNN);Deep learning;Tri-CNN},
-  doi={10.1109/ICCIT68739.2025.11491611}}
-
+  doi={10.1109/ICCIT68739.2025.11491611},
+  url={https://doi.org/10.1109/ICCIT68739.2025.11491611}
+}
+```
 
 

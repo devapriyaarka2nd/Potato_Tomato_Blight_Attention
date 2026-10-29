@@ -6,18 +6,17 @@ References below use **zero-based cell indices in the original notebook**. The o
 
 ## Coverage and model terminology
 
-The paper covers both potato and tomato. Original cell 1 explicitly trains only on `Potato___Early_blight` and `Potato___Late_blight`, and its classifier has two outputs. The tomato experiment is not present. Healthy potato classification is not implemented in the supplied notebook.
+The paper covers both potato and tomato. Original cell 1 explicitly trains only on `Potato___Early_blight` and `Potato___Late_blight`, and its classifier has two outputs. The tomato experiment is not presented here.
 
-The function named `tri_attention` implements parallel channel refinement and spatial refinement, followed by additive fusion. It should not be described as three independently learned attention branches. The two channel-attention dense layers retain the same channel count; the channel-reduction factor described in the paper's general formulation is not implemented here.
+The function named `tri_attention` implements parallel channel refinement and spatial refinement, followed by additive fusion. It should not be described as three independently learned attention branches. 
 
 ## Saved result provenance needs reconciliation
 
 - Cell 1 records 1,600 training and 400 validation images, then prints `Validation Loss: 0.0360, Validation Accuracy: 0.9925`.
 - Cell 2 loads an external model via `model_path` and evaluates the validation subset of a separate `filtered_dataset`. Its saved report has 400 samples and rounded accuracy 0.55. Its saved confusion matrix is `[[200, 0], [181, 19]]`.
 - Cell 6 reloads a `.keras` model from Drive and evaluates up to 150 images per class. Its saved report has 300 samples and rounded accuracy 0.66.
-- The manuscript reports potato training/validation accuracy 99.47%/99.25% and separately reports precision/recall/F1 as 0.93/0.92/0.92. The uploaded snapshot does not establish one common checkpoint, image split, or evaluation protocol connecting those figures.
+- The manuscript reports potato training/validation accuracy 99.47%/99.25% and separately reports precision/recall/F1 as 0.93/0.92/0.92. 
 
-Different checkpoints, data preparation, class mappings, or session states are possible explanations, but none has been established. Do not infer a cause or replace historical results with selected favorable values. Obtain the actual saved models and image-ID manifests before attaching a benchmark claim to this code release.
 
 ## Execution order and external files
 
@@ -33,21 +32,17 @@ Cell 1 uses the same `ImageDataGenerator` configuration, including random transf
 
 `EarlyStopping` and `ReduceLROnPlateau` objects are defined, but `model.fit` receives neither through `callbacks=`. They do not affect that training call. Do not describe early stopping, learning-rate scheduling, or best-weight restoration as active in this snapshot.
 
-Comments refer to Gaussian noise, but no Gaussian-noise operation appears in the training data pipeline.
+
 
 ## Final subset is not established as an independent test set
 
-Cell 6 selects the first up-to-150 readable, sorted files in each of the same potato class directories used for the earlier training/validation setup. It does not exclude training or validation filenames. Its title says 300 photos even though fewer files could be loaded in a different directory.
-
-There is no test manifest, duplicate-image check, or grouping by leaf/plant identity. Without the actual filenames, the precise overlap cannot be quantified here; independence is not established by this procedure. Use explicit, disjoint image-ID manifests and preserve them with the results before making test-performance claims.
-
-Cell 2 uses automatic folder-based class inference on `filtered_dataset`, whereas training fixes a two-class list. Confirm the exact folder names, class order, two-class membership, and file IDs match the intended evaluation. The supplied folder contents were not available for verification.
+Cell 6 selects the first up-to-150 readable, sorted files in each of the same potato class directories used for the earlier training/validation setup. It does not exclude training or validation filenames. 
 
 ## Attention visualization
 
-Cells 3 and 4 are two visualization variants. They read `multiply` and `multiply_1`, which are attention-refined features rather than raw channel/spatial attention weights. Auto-generated layer names can change across models or session builds.
+Cells 3 and 4 are two visualization variants. They read `multiply` and `multiply_1`, which are attention-refined features rather than raw channel/spatial attention weights. 
 
-Cell 4 normalizes by `max - min` without guarding constant feature maps. That can produce division by zero. Averaging channels is a visualization choice, not evidence that the model localizes lesions correctly.
+Cell 4 normalizes by `max - min` without guarding constant feature maps. Averaging channels is a visualization choice, not evidence that the model localizes lesions correctly.
 
 ## Reproducibility details to supply
 

@@ -1,0 +1,30 @@
+Historical text output from uploaded notebook, original zero-based cell 2. Not regenerated.
+
+Found 400 images belonging to 2 classes.
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 462ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 482ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 279ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 353ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 1s 551ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 1s 556ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 308ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 303ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 291ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 304ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 1s 534ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 285ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 447ms/step
+Classification Report:
+                       precision    recall  f1-score   support
+
+Potato___Early_blight       0.52      1.00      0.69       200
+ Potato___Late_blight       1.00      0.10      0.17       200
+
+             accuracy                           0.55       400
+            macro avg       0.76      0.55      0.43       400
+         weighted avg       0.76      0.55      0.43       400
+
+Confusion Matrix:
+[[200   0]
+ [181  19]]
+

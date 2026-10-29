@@ -1,0 +1,36 @@
+# Python environments, bytecode, and notebook checkpoints
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Local datasets, retaining setup documentation
+/data/*
+!/data/README.md
+PlantVillage/
+filtered_dataset/
+
+# Trained weights, checkpoints, and run artifacts
+models/
+checkpoints/
+*.keras
+*.h5
+*.hdf5
+*.ckpt
+logs/
+runs/
+outputs/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+kaggle.json
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

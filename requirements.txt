@@ -1,0 +1,8 @@
+# Inferred dependencies. Original tested versions were not supplied.
+tensorflow
+numpy
+matplotlib
+scikit-learn
+seaborn
+pillow
+jupyterlab

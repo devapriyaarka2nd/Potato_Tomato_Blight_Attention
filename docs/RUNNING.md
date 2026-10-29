@@ -25,7 +25,7 @@ The dataset, filtered directory, and model file are not included.
 2. Mount your Drive with the first original code cell.
 3. Verify the exact datasets and saved model correspond to the experiment you intend to inspect.
 4. Review all absolute paths, class names, and the undefined model path before running dependent sections.
-5. The model/training section can train if its dependencies and dataset are available. The remaining sections depend on historical external artifacts and do not form a complete fresh-session run as supplied.
+
 
 ## Local use
 

@@ -2,7 +2,7 @@
 
 Code accompanying **An Attention Based Deep Learning Approach for Classification of Potato and Tomato Blight Leaves**.
 
-**Authors:** Naimul Islam Udoy, Arka Chakraborty, Aung Koko, and Aditta Chowdhury.
+**Authors:** **Naimul Islam Udoy**, **Arka Chakraborty**, Aung Koko, and Aditta Chowdhury.
 
 The paper studies early-versus-late blight classification using a CNN with channel and spatial attention branches and additive fusion, described in the paper as Tri-Attention.
 
@@ -74,7 +74,7 @@ python -m pip install -r requirements.txt
 python -m jupyter lab
 ```
 
-Skip the Drive-mount cell locally and update the absolute paths. Dependencies are unpinned because the original tested package versions were not supplied. Installation, model loading, and end-to-end training have not been tested for this organization update.
+Skip the Drive-mount cell locally and update the absolute paths. Dependencies are unpinned because the original tested package versions were not supplied. We have not tested installation, model loading, or end-to-end training for this organization update.
 
 ## Dataset
 
@@ -125,17 +125,27 @@ The visualization averages normalized outputs of the two `Multiply` layers. Thes
 - The final 300-image subset is selected from the same class directories, without an independent split manifest or exclusion check.
 - `model_path` is undefined in one evaluation cell. Other cells require an external `.keras` model that was not uploaded.
 - Early-stopping and learning-rate callback objects are created but are not passed into `model.fit`.
-- The saved model variable is overwritten by external-model loading before the save cell.
-
-See [the code review](docs/CODE_REVIEW.md) for exact original cell references and required follow-up. The original code cells were preserved so an organization update does not silently alter the historical experiment. The original 300 individual prediction plots were omitted from the repository notebook to keep it small; selected figures and text outputs remain traceable.
+ The original 300 individual prediction plots were omitted from the repository notebook to keep it small; selected figures and text outputs remain traceable.
 
 ## Paper and citation
 
 **An Attention Based Deep Learning Approach for Classification of Potato and Tomato Blight Leaves**  
 Naimul Islam Udoy, Arka Chakraborty, Aung Koko, and Aditta Chowdhury.
 
-The supplied paper carries the heading of the **2025 28th International Conference on Computer and Information Technology (ICCIT)**. Add the verified final publication URL, DOI, and bibliographic details when available. No DOI or publication status has been inferred from the PDF alone. The paper PDF itself is not redistributed in this package.
+The supplied paper carries the heading of the **2025 28th International Conference on Computer and Information Technology (ICCIT)**. 
+URL: https://ieeexplore.ieee.org/abstract/document/11491611
+DOI: https://doi.org/10.1109/ICCIT68739.2025.11491611
+If you find this work helpful, consider citing our study:
+@INPROCEEDINGS{11491611,
+  author={Udoy, Naimul Islam and Chakraborty, Arka and Koko, Aung and Chowdhury, Aditta},
+  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)}, 
+  title={An Attention Based Deep Learning Approach for Classification of Potato and Tomato Blight Leaves}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={4538-4542},
+  keywords={Feeds;Protocols;Location awareness;HTTP;Mobile communication;LoRa;Pixel;Data communication;Attention mechanisms;Convolutional neural networks;Batch normalization;Convolutional Neural Network(CNN);Deep learning;Tri-CNN},
+  doi={10.1109/ICCIT68739.2025.11491611}}
 
-## License
 
-No code license was supplied. Confirm the applicable license with the contributors before adding one. Code and dataset permissions are separate.
+

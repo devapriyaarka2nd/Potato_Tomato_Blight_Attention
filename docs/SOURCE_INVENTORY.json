@@ -1,0 +1,38 @@
+{
+  "original_filename": "Potato_CNN_Attention.ipynb",
+  "workspace_source_basename": "01-Potato_CNN_Attention.ipynb",
+  "original_sha256": "c0fe43cf2d9a1e9a6bde83ed96473e95306dec8f7e3838575c5a3aec27ca2612",
+  "original_bytes": 87484867,
+  "organized_notebook": "notebooks/potato_attention_cnn.ipynb",
+  "original_code_cells": 7,
+  "code_cells_unchanged": true,
+  "figures": [
+    {
+      "file": "figures/notebook_exports/potato_accuracy_history.png",
+      "original_cell_index_zero_based": 1,
+      "png_index": 0,
+      "sha256": "2d2f8c49cf1e6d0d4863a491f4533fd2ed2158713e2343710b6157daf5f6828b",
+      "status": "historical notebook output; not regenerated"
+    },
+    {
+      "file": "figures/notebook_exports/potato_loss_history.png",
+      "original_cell_index_zero_based": 1,
+      "png_index": 1,
+      "sha256": "3ef59156924cb4eaaf530255a2cbfe8a1f9dbd83ca017d391388913f039f5454",
+      "status": "historical notebook output; not regenerated"
+    },
+    {
+      "file": "figures/notebook_exports/potato_attention_refined_features.png",
+      "original_cell_index_zero_based": 4,
+      "png_index": 0,
+      "sha256": "eba4f6804dc7e8209b40527425c6ba8b9891a0395d7bf7f1c4bdb8d8f72ecace",
+      "status": "historical notebook output; not regenerated"
+    }
+  ],
+  "paper_source": {
+    "uploaded_filename": "1810.pdf",
+    "sha256": "69c3abada59865cd03f312a4640dca6836dffae2808d394d7cc55dbf77306cbb",
+    "redistributed_in_package": false
+  },
+  "verification": "Static code inspection, code-cell equality, Python syntax, figure extraction; no training or model loading."
+}
